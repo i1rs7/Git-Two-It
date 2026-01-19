@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dwtsylfvti68l"]
+[gd_scene load_steps=5 format=3 uid="uid://dwtsylfvti68l"]
 
-[ext_resource type="PackedScene" uid="uid://db8vjvo3v4mla" path="res://files/game files/UI_V2/ui.tscn" id="2_8omgj"]
-[ext_resource type="Script" path="res://files/game files/levels/level_manager.gd" id="2_c6yd4"]
+[ext_resource type="PackedScene" uid="uid://db8vjvo3v4mla" path="res://files/game files/UI_V2/settings.tscn" id="2_8omgj"]
+[ext_resource type="Script" uid="uid://dnpyr83fito3y" path="res://files/game files/levels/level_manager.gd" id="2_c6yd4"]
 [ext_resource type="AudioStream" uid="uid://imqagqnyr7rk" path="res://files/game files/sounds/mobile-casual-video-game-music-158301.mp3" id="3_0wrf5"]
+[ext_resource type="PackedScene" uid="uid://drxeyrjhtlpdu" path="res://files/game files/UI_V2/UI.tscn" id="4_fmiie"]
 
 [node name="Game" type="Node2D"]
 
@@ -12,7 +13,7 @@ script = ExtResource("2_c6yd4")
 [node name="placeholder level" type="Node2D" parent="Level Manager"]
 visible = false
 
-[node name="UI" parent="." instance=ExtResource("2_8omgj")]
+[node name="Settings" parent="." instance=ExtResource("2_8omgj")]
 anchors_preset = -1
 offset_right = 576.0
 offset_bottom = 324.0
@@ -24,3 +25,5 @@ stream = ExtResource("3_0wrf5")
 autoplay = true
 max_distance = 1600.0
 parameters/looping = true
+
+[node name="UI" parent="." instance=ExtResource("4_fmiie")]
