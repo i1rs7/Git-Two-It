@@ -15,6 +15,7 @@ const LEVEL_SELECT_BUTTON = preload("res://files/game files/UI_V2/level select b
 
 func _ready() -> void:
 	load_level_buttons($"../Level Manager".num_levels)
+	$"../music_player".volume_db = -35
 	
 
 

@@ -12,8 +12,9 @@ func _ready() -> void:
 	pass
 
 func _process(_delta: float) -> void:
-	if Input.is_action_just_pressed("spawn") and get_child_count() < 2: split()
+	if Input.is_action_just_pressed("split") and get_child_count() < 2: split()
 	if Input.is_action_just_pressed("ui_accept") and get_child_count() > 1: swap()
+	if Input.is_action_just_pressed("merge") and Globals.can_merge: merge()
 
 func merge():
 	var cat = get_child(0)
@@ -26,6 +27,7 @@ func merge():
 	if octocat.key : octocat.get_node("key").show()
 	cat.queue_free()
 	oct.queue_free()
+	Globals.set_can_split(true)
 
 
 func swap():
@@ -43,7 +45,8 @@ func split():
 	cat.selected = true
 	oct.selected = false
 	cat.key = octocat.key
-	oct.key = octocat.key
+	oct.key = false
 	if cat.key: cat.get_node("key").show()
 	if oct.key: oct.get_node("key").show()
 	octocat.queue_free()
+	Globals.set_can_split(false)

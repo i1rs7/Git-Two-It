@@ -71,4 +71,14 @@ func player_animation():
 	
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_class("CharacterBody2D") and self != body:
-		get_parent().merge()
+		Globals.set_can_merge(true)
+		body.key = true
+		
+		
+func _on_area_2d_body_exited(body: Node2D) -> void:
+	if body.is_class("CharacterBody2D") and self != body:
+		Globals.set_can_merge(false)
+		
+		
+		
+		
