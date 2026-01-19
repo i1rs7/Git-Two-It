@@ -3,6 +3,8 @@ extends StaticBody2D
 @export var opened_by_key = false
 @export var initial_state = true
 @export var slow_open = false
+@export var active_buttons = 0
+
 
 func _ready() -> void:
 	if !initial_state: disable()
@@ -11,9 +13,20 @@ func _process(_delta: float) -> void:
 	pass
 
 
-func button_update(state: bool):
-	if state != initial_state: enable()
-	else: disable()
+func button_update(pressed: bool):
+	if pressed:
+		active_buttons += 1
+	else:
+		active_buttons -= 1
+
+	active_buttons = max(active_buttons, 0)
+
+	print(active_buttons)
+	
+	if active_buttons > 0:
+		disable()
+	else:
+		enable()
 
 
 func disable():
