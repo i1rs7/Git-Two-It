@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://drxeyrjhtlpdu"]
+[gd_scene load_steps=5 format=3 uid="uid://drxeyrjhtlpdu"]
 
 [ext_resource type="Script" uid="uid://bts5476a61x05" path="res://files/game files/UI_V2/ui.gd" id="1_fav74"]
 [ext_resource type="Texture2D" uid="uid://claued6mo0xqg" path="res://files/game files/UI_V2/icons/split.png" id="1_n7rs4"]
 [ext_resource type="Texture2D" uid="uid://bebhnr2xt7fi" path="res://files/game files/UI_V2/icons/merge.png" id="2_fav74"]
+[ext_resource type="Texture2D" uid="uid://dl4nrkirkoh0v" path="res://files/game files/UI_V2/icons/swap.png" id="4_p2vca"]
 
 [node name="UI" type="Control"]
 layout_mode = 3
@@ -13,32 +14,62 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_fav74")
 
-[node name="SplitButton" type="Button" parent="."]
-layout_mode = 0
-offset_left = 167.0
-offset_top = 286.0
-offset_right = 244.0
-offset_bottom = 316.0
+[node name="SplitUI" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="Split" type="TextureRect" parent="."]
+[node name="SplitButton" type="Button" parent="SplitUI"]
 layout_mode = 0
-offset_left = 165.0
-offset_top = 280.0
-offset_right = 249.0
-offset_bottom = 316.0
+offset_left = 91.0
+offset_top = 283.0
+offset_right = 168.0
+offset_bottom = 313.0
+
+[node name="Split" type="TextureRect" parent="SplitUI"]
+layout_mode = 0
+offset_left = 89.0
+offset_top = 277.0
+offset_right = 173.0
+offset_bottom = 313.0
 texture = ExtResource("1_n7rs4")
 
-[node name="MergeButton" type="Button" parent="."]
-layout_mode = 0
-offset_left = 335.0
-offset_top = 287.0
-offset_right = 413.0
-offset_bottom = 315.0
+[node name="MergeUI" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="Merge" type="TextureRect" parent="."]
+[node name="MergeButton" type="Button" parent="MergeUI"]
 layout_mode = 0
-offset_left = 334.0
-offset_top = 280.0
-offset_right = 422.0
-offset_bottom = 316.0
+offset_left = 253.0
+offset_top = 283.0
+offset_right = 331.0
+offset_bottom = 311.0
+
+[node name="Merge" type="TextureRect" parent="MergeUI"]
+layout_mode = 0
+offset_left = 252.0
+offset_top = 276.0
+offset_right = 340.0
+offset_bottom = 312.0
 texture = ExtResource("2_fav74")
+
+[node name="SwapUI" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SwapButton" type="Button" parent="SwapUI"]
+layout_mode = 0
+offset_left = 415.0
+offset_top = 282.0
+offset_right = 496.0
+offset_bottom = 311.0
+
+[node name="Swap" type="TextureRect" parent="SwapUI"]
+layout_mode = 0
+offset_left = 415.0
+offset_top = 276.0
+offset_right = 525.0
+offset_bottom = 312.0
+texture = ExtResource("4_p2vca")

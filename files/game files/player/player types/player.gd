@@ -71,13 +71,13 @@ func player_animation():
 	
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_class("CharacterBody2D") and self != body:
-		Globals.set_can_merge(true)
-		body.key = true
+		input_manager.set_can_merge(true)
+		#transfer keys
 		
 		
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	if body.is_class("CharacterBody2D") and self != body:
-		Globals.set_can_merge(false)
+		input_manager.set_can_merge(false)
 		
 		
 		

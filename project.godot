@@ -16,7 +16,7 @@ config/features=PackedStringArray("4.5", "Mobile")
 
 [autoload]
 
-Globals="*res://files/game files/globals.gd"
+input_manager="*res://files/game files/input_manager.gd"
 
 [display]
 
