@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://deo8a4rwsrn28"
-path="res://.godot/imported/player_tilesheet.png-36f2c380b72ec5c7a19ae4ba5855f1ed.ctex"
+uid="uid://bkqv5mmp0ataj"
+path="res://.godot/imported/icon.jpg-64f68b30ea939aa8019167e67dffb2db.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://files/game files/player/player_tilesheet.png"
-dest_files=["res://.godot/imported/player_tilesheet.png-36f2c380b72ec5c7a19ae4ba5855f1ed.ctex"]
+source_file="res://images/icon.jpg"
+dest_files=["res://.godot/imported/icon.jpg-64f68b30ea939aa8019167e67dffb2db.ctex"]
 
 [params]
 

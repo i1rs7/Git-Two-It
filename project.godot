@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Git Two It!"
 run/main_scene="res://files/game files/titlescreen.tscn"
-config/features=PackedStringArray("4.3", "Mobile")
+config/features=PackedStringArray("4.5", "Mobile")
 
 [display]
 
@@ -21,6 +21,10 @@ window/size/viewport_height=324
 window/size/mode=2
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 
 [global_group]
 

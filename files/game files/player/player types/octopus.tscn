@@ -1,10 +1,11 @@
-[gd_scene load_steps=22 format=3 uid="uid://boo6h7l4j7vwa"]
+[gd_scene load_steps=23 format=3 uid="uid://boo6h7l4j7vwa"]
 
-[ext_resource type="Script" path="res://files/game files/player/player types/player.gd" id="1_wi4we"]
+[ext_resource type="Script" uid="uid://sndrkhfgr16c" path="res://files/game files/player/player types/player.gd" id="1_wi4we"]
 [ext_resource type="Texture2D" uid="uid://deo8a4rwsrn28" path="res://files/game files/player/player_tilesheet.png" id="2_ona6s"]
 [ext_resource type="Texture2D" uid="uid://dmt38v5wy1jpl" path="res://files/game files/elements/assets/item assets.png" id="3_vxbug"]
 [ext_resource type="AudioStream" uid="uid://b5o3nm0ugnxrk" path="res://files/game files/SFX/money-pickup-2-89563.mp3" id="4_pnt1j"]
 [ext_resource type="AudioStream" uid="uid://dtwv0eshdcpgr" path="res://files/game files/SFX/clank1-91862.mp3" id="5_k2i5l"]
+[ext_resource type="Texture2D" uid="uid://ptgk3mc3t8mk" path="res://files/game files/player/player UI/purple arrow.png" id="6_ws2oa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dr1ap"]
 size = Vector2(15, 30)
@@ -155,5 +156,9 @@ stream = ExtResource("4_pnt1j")
 
 [node name="DoorOpen" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_k2i5l")
+
+[node name="ArrowIndicator" type="Sprite2D" parent="."]
+position = Vector2(0, -23)
+texture = ExtResource("6_ws2oa")
 
 [connection signal="ready" from="." to="." method="_on_ready"]

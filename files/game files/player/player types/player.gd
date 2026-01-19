@@ -6,6 +6,7 @@ const JUMP_VELOCITY = -250.0
 const TRAMP_BOUNCE_VELOCITY = -375.0
 @onready var key_collect: AudioStreamPlayer2D = $KeyCollect
 @onready var door_open: AudioStreamPlayer2D = $DoorOpen
+@onready var arrow_indicator: Sprite2D = $ArrowIndicator
 
 
 var key = false
@@ -13,7 +14,7 @@ var selected = true
 
 
 func _ready() -> void:
-	pass
+	arrow_indicator.hide()
 
 
 func _physics_process(delta: float) -> void:
@@ -23,10 +24,13 @@ func _physics_process(delta: float) -> void:
 func move(delta: float) -> void:
 	if not is_on_floor(): velocity += get_gravity() * delta / 2 # Add the gravity.
 	if selected: # only evaluate movement if the node is selected
+		arrow_indicator.show()
 		if Input.is_action_just_pressed("ui_up") and is_on_floor(): 
 			velocity.y = JUMP_VELOCITY # Handle jump.
 		velocity.x = Input.get_axis("ui_left","ui_right") * SPEED # move based on left and right
 		player_animation()
+	else:
+		arrow_indicator.hide()
 	move_and_slide() # Move by velocity.
 
 

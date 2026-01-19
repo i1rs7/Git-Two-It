@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://deo8a4rwsrn28"
-path="res://.godot/imported/player_tilesheet.png-36f2c380b72ec5c7a19ae4ba5855f1ed.ctex"
+uid="uid://ptgk3mc3t8mk"
+path="res://.godot/imported/purple arrow.png-1b086d638afc38643c35190c92abe200.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://files/game files/player/player_tilesheet.png"
-dest_files=["res://.godot/imported/player_tilesheet.png-36f2c380b72ec5c7a19ae4ba5855f1ed.ctex"]
+source_file="res://files/game files/player/player UI/purple arrow.png"
+dest_files=["res://.godot/imported/purple arrow.png-1b086d638afc38643c35190c92abe200.ctex"]
 
 [params]
 
