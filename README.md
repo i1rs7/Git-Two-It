@@ -1,0 +1,1 @@
+A 2D puzzle platformer where you play as GitHub’s iconic mascot, the Octocat! Press C to split your main branch into two new branches: the Octopus and the Cat. Control both characters to unlock doors, navigate obstacles, and reach the end of each level.
