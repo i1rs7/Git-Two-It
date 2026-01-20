@@ -36,6 +36,7 @@ func move(delta: float) -> void:
 		velocity.x = Input.get_axis("ui_left","ui_right") * SPEED # move based on left and right
 		player_animation()
 	else:
+		velocity.x = 0
 		arrow_indicator.hide()
 		tall_arrow_indicator.hide()
 	move_and_slide() # Move by velocity.
