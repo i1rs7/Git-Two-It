@@ -148,4 +148,6 @@ stream = ExtResource("5_h5sdj")
 
 [node name="ArrowIndicator" type="Sprite2D" parent="."]
 
+[node name="TallArrowIndicator" type="Sprite2D" parent="."]
+
 [connection signal="ready" from="." to="." method="_on_ready"]

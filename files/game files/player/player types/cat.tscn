@@ -164,8 +164,15 @@ stream = ExtResource("4_sacg2")
 [node name="DoorOpen" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_mhh1u")
 
+[node name="TallArrowIndicator" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0, -30)
+scale = Vector2(0.75, 0.6875)
+texture = ExtResource("6_hv1s1")
+
 [node name="ArrowIndicator" type="Sprite2D" parent="."]
-position = Vector2(1, -25)
+position = Vector2(0, -20.000002)
+scale = Vector2(0.74999994, 0.6748047)
 texture = ExtResource("6_hv1s1")
 
 [connection signal="ready" from="." to="." method="_on_ready"]

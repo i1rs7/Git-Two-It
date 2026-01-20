@@ -7,6 +7,7 @@ const TRAMP_BOUNCE_VELOCITY = -375.0
 @onready var key_collect: AudioStreamPlayer2D = $KeyCollect
 @onready var door_open: AudioStreamPlayer2D = $DoorOpen
 @onready var arrow_indicator: Sprite2D = $ArrowIndicator
+@onready var tall_arrow_indicator: Sprite2D = $TallArrowIndicator
 
 
 var key = false
@@ -24,13 +25,19 @@ func _physics_process(delta: float) -> void:
 func move(delta: float) -> void:
 	if not is_on_floor(): velocity += get_gravity() * delta / 2 # Add the gravity.
 	if selected: # only evaluate movement if the node is selected
-		arrow_indicator.show()
+		if key:
+			tall_arrow_indicator.show()
+			arrow_indicator.hide()
+		else:
+			arrow_indicator.show()
+			tall_arrow_indicator.hide()
 		if Input.is_action_just_pressed("ui_up") and is_on_floor(): 
 			velocity.y = JUMP_VELOCITY # Handle jump.
 		velocity.x = Input.get_axis("ui_left","ui_right") * SPEED # move based on left and right
 		player_animation()
 	else:
 		arrow_indicator.hide()
+		tall_arrow_indicator.hide()
 	move_and_slide() # Move by velocity.
 
 
@@ -72,7 +79,22 @@ func player_animation():
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_class("CharacterBody2D") and self != body:
 		input_manager.set_can_merge(true)
-		#transfer keys
+		# Case 1: only self has key → transfer to body
+		if key and not body.key:
+			body.key = true
+			body.get_node("key").show()
+			key = false
+			get_node("key").hide()
+			key_collect.play()
+
+		# Case 2: only body has key → transfer to self
+		elif body.key and not key:
+			key = true
+			get_node("key").show()
+			body.key = false
+			body.get_node("key").hide()
+			key_collect.play()
+
 		
 		
 func _on_area_2d_body_exited(body: Node2D) -> void:

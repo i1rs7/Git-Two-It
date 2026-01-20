@@ -158,7 +158,15 @@ stream = ExtResource("4_pnt1j")
 stream = ExtResource("5_k2i5l")
 
 [node name="ArrowIndicator" type="Sprite2D" parent="."]
-position = Vector2(0, -23)
+visible = false
+position = Vector2(-9.536743e-07, -20.000002)
+scale = Vector2(0.6875, 0.625)
+texture = ExtResource("6_ws2oa")
+
+[node name="TallArrowIndicator" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0, -30)
+scale = Vector2(0.75, 0.68750006)
 texture = ExtResource("6_ws2oa")
 
 [connection signal="ready" from="." to="." method="_on_ready"]
