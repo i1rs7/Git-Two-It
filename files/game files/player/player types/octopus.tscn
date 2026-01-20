@@ -7,8 +7,8 @@
 [ext_resource type="AudioStream" uid="uid://dtwv0eshdcpgr" path="res://files/game files/SFX/clank1-91862.mp3" id="5_k2i5l"]
 [ext_resource type="Texture2D" uid="uid://ptgk3mc3t8mk" path="res://files/game files/player/player UI/purple arrow.png" id="6_ws2oa"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_dr1ap"]
-size = Vector2(15, 30)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ws2oa"]
+radius = 9.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pj4g4"]
 atlas = ExtResource("2_ona6s")
@@ -138,7 +138,7 @@ metadata/key = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)
-shape = SubResource("RectangleShape2D_dr1ap")
+shape = SubResource("CapsuleShape2D_ws2oa")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_77rv0")

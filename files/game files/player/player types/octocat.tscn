@@ -6,8 +6,8 @@
 [ext_resource type="AudioStream" uid="uid://b5o3nm0ugnxrk" path="res://files/game files/SFX/money-pickup-2-89563.mp3" id="4_xqpn4"]
 [ext_resource type="AudioStream" uid="uid://dtwv0eshdcpgr" path="res://files/game files/SFX/clank1-91862.mp3" id="5_h5sdj"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qyopk"]
-size = Vector2(20, 32)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ptmfx"]
+radius = 8.461539
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qbajh"]
 atlas = ExtResource("2_0bbu7")
@@ -129,7 +129,7 @@ scale = Vector2(1.3, 1.3)
 script = ExtResource("1_fm6sl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_qyopk")
+shape = SubResource("CapsuleShape2D_ptmfx")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_4m6ji")
