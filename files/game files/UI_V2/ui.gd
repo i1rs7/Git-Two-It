@@ -1,5 +1,13 @@
 extends Control
 
+const grayed_split = preload("res://files/game files/UI_V2/icons/grayed out split.png")
+const grayed_merge = preload("res://files/game files/UI_V2/icons/grayed out merge.png")
+const grayed_swap = preload("res://files/game files/UI_V2/icons/grayed out swap.png")
+const split_texture = preload("res://files/game files/UI_V2/icons/split.png")
+const merge_texture = preload("res://files/game files/UI_V2/icons/merge.png")
+const swap_texture = preload("res://files/game files/UI_V2/icons/swap.png")
+
+
 @onready var split: TextureRect = $SplitUI/Split
 @onready var split_button: Button = $SplitUI/SplitButton
 @onready var merge: TextureRect = $MergeUI/Merge
@@ -24,23 +32,23 @@ func _ready() -> void:
 func _on_split_changed(can_split: bool) -> void:
 	if can_split:
 		split_button.disabled = false
-		split.self_modulate.a = 1
+		split.texture = split_texture
 	else:
 		split_button.disabled = true
-		split.self_modulate.a = 0.25
+		split.texture = grayed_split
 
 func _on_merge_changed(can_merge: bool) -> void:
 	if can_merge:
 		merge_button.disabled = false
-		merge.self_modulate.a = 1
+		merge.texture = merge_texture
 	else:
 		merge_button.disabled = true
-		merge.self_modulate.a = 0.25
+		merge.texture = grayed_merge
 
 func _on_swap_changed(can_swap: bool) -> void:
 	if can_swap:
 		swap_button.disabled = false
-		swap.self_modulate.a = 1
+		swap.texture = swap_texture
 	else:
 		swap_button.disabled = true
-		swap.self_modulate.a = 0.25
+		swap.texture = grayed_swap

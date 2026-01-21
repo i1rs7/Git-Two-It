@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://oj3byk4skhns"
-path="res://.godot/imported/swap.png-4db53ba67f2774ab78b1204c2e293970.ctex"
+uid="uid://ccmiyliis1t5u"
+path="res://.godot/imported/grayed out swap.png-1f034aa87c0041f27bf8a3b76e6cb206.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://files/game files/UI_V2/icons/swap.png"
-dest_files=["res://.godot/imported/swap.png-4db53ba67f2774ab78b1204c2e293970.ctex"]
+source_file="res://files/game files/UI_V2/icons/grayed out swap.png"
+dest_files=["res://.godot/imported/grayed out swap.png-1f034aa87c0041f27bf8a3b76e6cb206.ctex"]
 
 [params]
 
