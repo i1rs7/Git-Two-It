@@ -63,17 +63,27 @@ func handle_collisions():
 	elif collider.is_in_group("trampolines") and collider.state:
 		velocity.y = TRAMP_BOUNCE_VELOCITY
 		collider.play_animation()
+	elif collider.is_in_group("flags"):
+		collider.queue_free()
+		get_tree().root.get_child(0).find_child("Level Manager").load_next_level()
+		await tree_exited
 			
 func player_animation():
 	var direction = Input.get_axis("ui_left","ui_right")
 	if direction > 0:
 		$AnimatedSprite2D.play("move_right")
 		$AnimatedSprite2D.flip_h = false
-		$CollisionShape2D2.position.x = abs($CollisionShape2D2.position.x)
+		$CollisionShape2D.position.x = abs($CollisionShape2D.position.x)
 	elif direction < 0:
 		$AnimatedSprite2D.play("move_right")
 		$AnimatedSprite2D.flip_h = true
-		$CollisionShape2D2.position.x  = -abs($CollisionShape2D2.position.x)
+		$CollisionShape2D.position.x  = -abs($CollisionShape2D.position.x)
+	#if Input.get_axis("ui_left","ui_right") == 1:
+		#$AnimatedSprite2D.play("move_right")
+		#self.scale.x = 1
+	#elif Input.get_axis("ui_left","ui_right") == -1:
+		#$AnimatedSprite2D.play("move_left")
+		#self.scale.x = -1
 	elif direction == 0:
 		$AnimatedSprite2D.stop()
 

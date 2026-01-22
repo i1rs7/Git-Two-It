@@ -1,6 +1,6 @@
 [gd_scene load_steps=31 format=3 uid="uid://boo6h7l4j7vwa"]
 
-[ext_resource type="Script" uid="uid://sndrkhfgr16c" path="res://files/game files/player/player types/player.gd" id="1_wi4we"]
+[ext_resource type="Script" uid="uid://bhl4e1o23eqyf" path="res://files/game files/player/player types/octopus.gd" id="1_24kqk"]
 [ext_resource type="Texture2D" uid="uid://deo8a4rwsrn28" path="res://files/game files/player/player_tilesheet.png" id="2_ona6s"]
 [ext_resource type="Texture2D" uid="uid://dmt38v5wy1jpl" path="res://files/game files/elements/assets/item assets.png" id="3_vxbug"]
 [ext_resource type="AudioStream" uid="uid://b5o3nm0ugnxrk" path="res://files/game files/SFX/money-pickup-2-89563.mp3" id="4_pnt1j"]
@@ -184,7 +184,7 @@ animations = [{
 }]
 
 [node name="Octopus" type="CharacterBody2D"]
-script = ExtResource("1_wi4we")
+script = ExtResource("1_24kqk")
 metadata/key = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
