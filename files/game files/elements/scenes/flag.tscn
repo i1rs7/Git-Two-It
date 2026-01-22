@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://bxhs40jun86aa"]
+[gd_scene load_steps=5 format=3 uid="uid://bxhs40jun86aa"]
 
 [ext_resource type="Script" uid="uid://drvgsoxys8oy4" path="res://files/game files/elements/scripts/flag.gd" id="1_ui7ci"]
 [ext_resource type="Texture2D" uid="uid://c732ht61rwjru" path="res://files/game files/elements/assets/octocat door.png" id="2_fo31b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f42ta"]
 size = Vector2(27.204823, 33)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fo31b"]
+size = Vector2(20, 33)
 
 [node name="Flag" type="StaticBody2D" groups=["flags"]]
 script = ExtResource("1_ui7ci")
@@ -18,5 +21,9 @@ shape = SubResource("RectangleShape2D_f42ta")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_fo31b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(6, -0.5)
+shape = SubResource("RectangleShape2D_fo31b")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
