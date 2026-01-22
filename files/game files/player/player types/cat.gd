@@ -73,11 +73,11 @@ func player_animation():
 	if direction > 0:
 		$AnimatedSprite2D.play("move_right")
 		$AnimatedSprite2D.flip_h = false
-		$CollisionShape2D.position.x = abs($CollisionShape2D.position.x)
+		$CollisionShape2D2.position.x = abs($CollisionShape2D2.position.x)
 	elif direction < 0:
 		$AnimatedSprite2D.play("move_right")
 		$AnimatedSprite2D.flip_h = true
-		$CollisionShape2D.position.x  = -abs($CollisionShape2D.position.x)
+		$CollisionShape2D2.position.x  = -abs($CollisionShape2D2.position.x)
 	#if Input.get_axis("ui_left","ui_right") == 1:
 		#$AnimatedSprite2D.play("move_right")
 		#self.scale.x = 1

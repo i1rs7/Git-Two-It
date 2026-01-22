@@ -1,6 +1,6 @@
 [gd_scene load_steps=25 format=3 uid="uid://dpqxu2y4owalb"]
 
-[ext_resource type="Script" uid="uid://sndrkhfgr16c" path="res://files/game files/player/player types/player.gd" id="1_2s6qv"]
+[ext_resource type="Script" uid="uid://cqpid1p81n3e2" path="res://files/game files/player/player types/cat.gd" id="1_hv1s1"]
 [ext_resource type="Texture2D" uid="uid://deo8a4rwsrn28" path="res://files/game files/player/player_tilesheet.png" id="2_txp5u"]
 [ext_resource type="Texture2D" uid="uid://dmt38v5wy1jpl" path="res://files/game files/elements/assets/item assets.png" id="3_wim6q"]
 [ext_resource type="AudioStream" uid="uid://b5o3nm0ugnxrk" path="res://files/game files/SFX/money-pickup-2-89563.mp3" id="4_sacg2"]
@@ -140,7 +140,7 @@ height = 24.007553
 radius = 7.0
 
 [node name="Cat" type="CharacterBody2D"]
-script = ExtResource("1_2s6qv")
+script = ExtResource("1_hv1s1")
 metadata/key = false
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

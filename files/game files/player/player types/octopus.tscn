@@ -192,7 +192,6 @@ position = Vector2(0, 1)
 shape = SubResource("CapsuleShape2D_ws2oa")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-visible = false
 sprite_frames = SubResource("SpriteFrames_77rv0")
 animation = &"move_left"
 frame = 2
@@ -222,6 +221,7 @@ scale = Vector2(0.75, 0.68750006)
 texture = ExtResource("6_ws2oa")
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+visible = false
 modulate = Color(0.4862745, 0.3882353, 1, 1)
 sprite_frames = SubResource("SpriteFrames_vtcpc")
 
