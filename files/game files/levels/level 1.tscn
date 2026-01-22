@@ -31,7 +31,7 @@ scale = Vector2(1, 3)
 opened_by_key = true
 
 [node name="Flag" parent="Elements" instance=ExtResource("3_eb7e4")]
-position = Vector2(488, 265)
+position = Vector2(486, 256)
 
 [node name="duplication sign" parent="Elements" instance=ExtResource("5_o1pn8")]
 position = Vector2(152, 280)
