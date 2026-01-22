@@ -1,72 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://buup81l21lrkq"]
+[gd_scene load_steps=3 format=3 uid="uid://buup81l21lrkq"]
 
-[ext_resource type="Script" path="res://files/game files/titlescreen.gd" id="1_n3ga4"]
-[ext_resource type="Texture2D" uid="uid://deo8a4rwsrn28" path="res://files/game files/player/player_tilesheet.png" id="2_0ra1p"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yyj42"]
-bg_color = Color(0.0612635, 0.0904829, 0.131047, 1)
-border_width_left = 4
-border_width_top = 4
-border_width_right = 4
-border_width_bottom = 4
-border_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-shadow_color = Color(0.113363, 0.151691, 0.308936, 0.6)
-shadow_size = 4
-
-[sub_resource type="SystemFont" id="SystemFont_i51pk"]
-font_names = PackedStringArray("MingLiU-ExtB")
-
-[sub_resource type="LabelSettings" id="LabelSettings_41fww"]
-line_spacing = 1.0
-font = SubResource("SystemFont_i51pk")
-font_size = 52
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l6lcy"]
-bg_color = Color(0.0157725, 0.0227599, 0.134488, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 4
-corner_radius_top_right = 4
-corner_radius_bottom_right = 4
-corner_radius_bottom_left = 4
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4ybsp"]
-atlas = ExtResource("2_0ra1p")
-region = Rect2(0, 66, 32, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_jff6s"]
-resource_local_to_scene = true
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4ybsp")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jonpr"]
-atlas = ExtResource("2_0ra1p")
-region = Rect2(0, 33, 32, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_ybfmn"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jonpr")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
+[ext_resource type="Script" uid="uid://dco1mpll3xsya" path="res://files/game files/titlescreen.gd" id="1_n3ga4"]
+[ext_resource type="Texture2D" uid="uid://bpy31h2a04d4j" path="res://files/game files/misc_art/title screen.png" id="2_a4crm"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -77,75 +12,38 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_n3ga4")
 
-[node name="START_BOX" type="Panel" parent="."]
+[node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_yyj42")
+texture = ExtResource("2_a4crm")
+expand_mode = 2
 
-[node name="Label" type="Label" parent="START_BOX"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -104.0
-offset_top = 50.0
-offset_right = 104.0
-offset_bottom = 157.0
-grow_horizontal = 2
-text = "GIT TWO 
-      IT"
-label_settings = SubResource("LabelSettings_41fww")
-
-[node name="START GAME" type="Panel" parent="START_BOX"]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -131.5
-offset_top = -90.0
-offset_right = 131.5
-offset_bottom = -50.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_styles/panel = SubResource("StyleBoxFlat_l6lcy")
-
-[node name="S_lab" type="Label" parent="START_BOX/START GAME"]
+[node name="Levels_Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 52.0
-offset_top = 5.0
-offset_right = 150.0
-offset_bottom = 28.0
-scale = Vector2(1.57785, 1.23594)
-text = "START GAME
-"
+offset_left = 45.0
+offset_top = 255.0
+offset_right = 163.0
+offset_bottom = 286.0
+flat = true
 
-[node name="S_button" type="Button" parent="START_BOX/START GAME"]
+[node name="Credits_Button" type="Button" parent="."]
 layout_mode = 0
-offset_right = 261.0
-offset_bottom = 37.0
+offset_left = 410.0
+offset_top = 257.0
+offset_right = 528.0
+offset_bottom = 288.0
+flat = true
 
-[node name="Label2" type="Label" parent="START_BOX"]
+[node name="Play_Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 202.0
-offset_top = 177.0
-offset_right = 366.0
-offset_bottom = 200.0
-text = "By Iris, Jacob, and Kai"
+offset_left = 208.0
+offset_top = 245.0
+offset_right = 359.0
+offset_bottom = 305.0
+flat = true
 
-[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
-position = Vector2(89, 143)
-scale = Vector2(3.87, 3.87)
-sprite_frames = SubResource("SpriteFrames_jff6s")
-
-[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="."]
-position = Vector2(483, 134)
-scale = Vector2(3.655, 3.655)
-sprite_frames = SubResource("SpriteFrames_ybfmn")
-
-[connection signal="button_up" from="START_BOX/START GAME/S_button" to="." method="_on_s_button_button_up"]
+[connection signal="pressed" from="Play_Button" to="." method="_on_play_button_pressed"]

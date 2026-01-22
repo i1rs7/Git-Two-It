@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://b46k0xjmntdu2"]
 
 [ext_resource type="Texture2D" uid="uid://b2b7x3x43ocgj" path="res://files/game files/elements/assets/sign.png" id="1_k1fpi"]
-[ext_resource type="Script" path="res://files/game files/elements/scripts/sign.gd" id="1_ko0lt"]
+[ext_resource type="Script" uid="uid://d2ysda5fn2dne" path="res://files/game files/elements/scripts/sign.gd" id="1_ko0lt"]
 [ext_resource type="StyleBox" uid="uid://d0i0r0f4k64rb" path="res://files/game files/UI_V2/styles/panel.tres" id="2_1662p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ucnvl"]
@@ -21,7 +21,6 @@ texture = ExtResource("1_k1fpi")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 z_index = 1
-anchors_preset = -1
 offset_bottom = -8.0
 grow_horizontal = 2
 grow_vertical = 0

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgmalhwccgrvs"
-path="res://.godot/imported/grayed out split.png-1fe250720928b04553cdc7eb9ac5fb54.ctex"
+uid="uid://0y5owraa0aqa"
+path="res://.godot/imported/Cat Sprite Sheet.png-5a6f20ed57ed275b3aad2423939a95ef.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://files/game files/UI_V2/grayed out split.png"
-dest_files=["res://.godot/imported/grayed out split.png-1fe250720928b04553cdc7eb9ac5fb54.ctex"]
+source_file="res://files/game files/player/player_assets/Cat Sprite Sheet.png"
+dest_files=["res://.godot/imported/Cat Sprite Sheet.png-5a6f20ed57ed275b3aad2423939a95ef.ctex"]
 
 [params]
 

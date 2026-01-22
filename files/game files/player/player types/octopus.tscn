@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://boo6h7l4j7vwa"]
+[gd_scene load_steps=31 format=3 uid="uid://boo6h7l4j7vwa"]
 
 [ext_resource type="Script" uid="uid://sndrkhfgr16c" path="res://files/game files/player/player types/player.gd" id="1_wi4we"]
 [ext_resource type="Texture2D" uid="uid://deo8a4rwsrn28" path="res://files/game files/player/player_tilesheet.png" id="2_ona6s"]
@@ -6,6 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://b5o3nm0ugnxrk" path="res://files/game files/SFX/money-pickup-2-89563.mp3" id="4_pnt1j"]
 [ext_resource type="AudioStream" uid="uid://dtwv0eshdcpgr" path="res://files/game files/SFX/clank1-91862.mp3" id="5_k2i5l"]
 [ext_resource type="Texture2D" uid="uid://ptgk3mc3t8mk" path="res://files/game files/player/player UI/purple arrow.png" id="6_ws2oa"]
+[ext_resource type="Texture2D" uid="uid://8k4lav4o12ob" path="res://files/game files/player/player_assets/Octopus/Idle.png" id="7_24kqk"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ws2oa"]
 radius = 9.0
@@ -132,6 +133,56 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ctbx"]
+atlas = ExtResource("7_24kqk")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ced66"]
+atlas = ExtResource("7_24kqk")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xjxbk"]
+atlas = ExtResource("7_24kqk")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qkpx8"]
+atlas = ExtResource("7_24kqk")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sj6o2"]
+atlas = ExtResource("7_24kqk")
+region = Rect2(192, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5by4a"]
+atlas = ExtResource("7_24kqk")
+region = Rect2(240, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vtcpc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ctbx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ced66")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xjxbk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qkpx8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sj6o2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5by4a")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Octopus" type="CharacterBody2D"]
 script = ExtResource("1_wi4we")
 metadata/key = false
@@ -141,6 +192,7 @@ position = Vector2(0, 1)
 shape = SubResource("CapsuleShape2D_ws2oa")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+visible = false
 sprite_frames = SubResource("SpriteFrames_77rv0")
 animation = &"move_left"
 frame = 2
@@ -168,5 +220,9 @@ visible = false
 position = Vector2(0, -30)
 scale = Vector2(0.75, 0.68750006)
 texture = ExtResource("6_ws2oa")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+modulate = Color(0.4862745, 0.3882353, 1, 1)
+sprite_frames = SubResource("SpriteFrames_vtcpc")
 
 [connection signal="ready" from="." to="." method="_on_ready"]
