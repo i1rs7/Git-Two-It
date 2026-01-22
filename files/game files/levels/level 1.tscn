@@ -59,10 +59,6 @@ connections = [NodePath("../tutorial door 1")]
 position = Vector2(488, 184)
 text = "Press C to make two branches,\\nPress SPACE to swap between them"
 
-[node name="Sign" parent="Elements" instance=ExtResource("5_o1pn8")]
-position = Vector2(248, 200)
-text = "Stepping off a button will close the door,\\nregardless of other buttons"
-
 [node name="first door" parent="Elements" instance=ExtResource("5_1c6qm")]
 position = Vector2(408, 88)
 scale = Vector2(1, 5)
@@ -84,8 +80,13 @@ opened_by_key = true
 position = Vector2(322, 280)
 text = "Press R to restart if you get stuck,\\n or use the button in the level select menu"
 
+[node name="ending button" parent="Elements" instance=ExtResource("6_ekebv")]
+position = Vector2(350, 280)
+connections = [NodePath("../ending door 2")]
+
 [node name="Key3" parent="Elements" instance=ExtResource("4_kgcp8")]
-position = Vector2(328, 248)
+position = Vector2(487, 238)
 
 [node name="PlayerManager" parent="." instance=ExtResource("1_krukv")]
 position = Vector2(88, 108)
+scale = Vector2(0.9, 0.9)

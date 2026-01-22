@@ -1,48 +1,20 @@
-[gd_scene load_steps=10 format=3 uid="uid://bxhs40jun86aa"]
+[gd_scene load_steps=6 format=3 uid="uid://bxhs40jun86aa"]
 
-[ext_resource type="Script" path="res://files/game files/elements/scripts/flag.gd" id="1_ui7ci"]
-[ext_resource type="Texture2D" uid="uid://bc3xtyimgir3c" path="res://files/game files/elements/assets/flag.png" id="1_w32c4"]
+[ext_resource type="Script" uid="uid://drvgsoxys8oy4" path="res://files/game files/elements/scripts/flag.gd" id="1_ui7ci"]
+[ext_resource type="Texture2D" uid="uid://c732ht61rwjru" path="res://files/game files/elements/assets/octocat door.png" id="2_fo31b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f42ta"]
 size = Vector2(16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_mxg8b"]
-atlas = ExtResource("1_w32c4")
-region = Rect2(0, 0, 60, 60)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_frfsc"]
-atlas = ExtResource("1_w32c4")
-region = Rect2(60, 0, 60, 60)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4v635"]
-atlas = ExtResource("1_w32c4")
-region = Rect2(120, 0, 60, 60)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4ts0i"]
-atlas = ExtResource("1_w32c4")
-region = Rect2(180, 0, 60, 60)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vknsr"]
-atlas = ExtResource("1_w32c4")
-region = Rect2(240, 0, 60, 60)
+[sub_resource type="AtlasTexture" id="AtlasTexture_guebe"]
+atlas = ExtResource("2_fo31b")
+region = Rect2(0, 0, 29, 33)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6tjjd"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_mxg8b")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_frfsc")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4v635")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4ts0i")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_vknsr")
+"texture": SubResource("AtlasTexture_guebe")
 }],
 "loop": true,
 "name": &"default",
@@ -54,9 +26,10 @@ script = ExtResource("1_ui7ci")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -1)
+scale = Vector2(2.8400018, 2.9599998)
 shape = SubResource("RectangleShape2D_f42ta")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(4, -2)
-scale = Vector2(0.5, 0.327083)
+position = Vector2(-0.99999994, -1.0000001)
+scale = Vector2(1.420001, 1.4707496)
 sprite_frames = SubResource("SpriteFrames_6tjjd")

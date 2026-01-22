@@ -52,6 +52,3 @@ func split():
 	octocat.queue_free()
 	input_manager.set_can_split(false)
 	input_manager.set_can_swap(true)
-
-func swap_key():
-	pass
